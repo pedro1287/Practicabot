@@ -55,13 +55,13 @@ api_hash = "f52b5a057b73b9974eaa7403e04907f0"
 bot_token = "5823282217:AAHQYY5Yu1g6k6_mzrxXYnCjEoNP_ar0WXQ"
 Channel_Id = -831778463
 bot =  Client("bot",api_id=api_id,api_hash=api_hash,bot_token=bot_token)
-boss = ['raydel0307','darielxd','socram_Agm']#usuarios supremos
+boss = ['raydel0307','darielxd','JAGB2021']#usuarios supremos
 
 Configs = {"uclv":'',"gtm":"","uvs":"","ltu":"", 
 			"ucuser": "", "ucpass":"","uclv_p":"", "gp":None, "s":"On", 
 			'jvc2006': {'z': 99,"m":"e","a":"c","t":"y","gp":False},
 			'darielxd': {'z': 99,"m":"e","a":"c","t":"y","gp":False},
-			'raydel0307': {'z': 99,"m":"e","a":"c","t":"y","gp":False}	                }
+			'JAGB2021': {'z': 99,"m":"e","a":"c","t":"y","gp":False}	                }
 
 Urls = {} #urls subidos a educa
 Urls_draft = {} #urls para borrar de draft
@@ -70,8 +70,8 @@ id_de_ms = {} #id de mensage a borrar con la funcion de cancelar
 root = {} #directorio actual
 downlist = {} #lista de archivos descargados
 procesos = 0 #numero de procesos activos en el bot
-total_up = {'darielxd':{'P':0,'S':0},'raydel0307':{'P':0,'S':0}} #total en gb o megas subidos en bytes (int)
-rvs = {'darielxd':{'h':'','u':'','p':'','up':'','z':0,'m':'m'},'raydel0307':{'h':'','u':'','p':'','up':'','z':0,'m':'m'}}
+total_up = {'darielxd':{'P':0,'S':0},'JAGB2021':{'P':0,'S':0}} #total en gb o megas subidos en bytes (int)
+rvs = {'darielxd':{'h':'','u':'','p':'','up':'','z':0,'m':'m'},'JAGB2021':{'h':'','u':'','p':'','up':'','z':0,'m':'m'}}
 
 #inicio
 @bot.on_message(filters.command("start", prefixes="/") & filters.private)
