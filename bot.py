@@ -1682,6 +1682,16 @@ class RevistasClient:
 			else:
 				print('Login Error')
 				return False
+	if  "tramites.mined.gob.cu" in urls[0]:
+				connector = aiohttp.TCPConnector()
+				async with aiohttp.ClientSession(connector=connector) as session:
+					host = "https://tramites.mined.gob.cu/tickets.php"
+					payload = payload = {}
+					payload["source"] = "/tickets.php/user/profile"
+					payload["username"] = "jg4706938@gmail.com"
+					payload["password"] = "Lianet123*#"
+					async with session.post(host+"login/signIn", data=payload,ssl=False) as e:
+						print(222)
 	async def uploadfile_rv(self,file,msg,username):
 		filename_god = file
 		filename = str(file).split('/')[-1]
@@ -1701,16 +1711,6 @@ class RevistasClient:
 			print('URL=',url)
 			return url
 		
-if  "tramites.mined.gob.cu" in urls[0]:
-				connector = aiohttp.TCPConnector()
-				async with aiohttp.ClientSession(connector=connector) as session:
-					host = "https://tramites.mined.gob.cu/tickets.php"
-					payload = payload = {}
-					payload["source"] = "/tickets.php/user/profile"
-					payload["username"] = "jg4706938@gmail.com"
-					payload["password"] = "Lianet123*#"
-					async with session.post(host+"login/signIn", data=payload,ssl=False) as e:
-						print(222)
 class Progress(BufferedReader):
     def __init__(self, filename, read_callback):
         f = open(filename, "rb")
