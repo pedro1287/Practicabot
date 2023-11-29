@@ -2187,18 +2187,8 @@ async def up_revistas_api(file,usid,msg,username):
 		proxy = None #Configs[username]["gp"]
 		headers = {'User-Agent':'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:109.0) Gecko/20100101 Firefox/109.0'}
 		#login
-		msg = await msg.edit("🔴 Conectando ... 🔴")
-		connector = aiohttp.TCPConnector()
-		if proxy:
-			connector = aiohttp_socks.ProxyConnector.from_url(proxy)
-		async with aiohttp.ClientSession(connector=connector) as session:
-			payload = payload = {}
-			payload["source"] = "/tickets.php/user/profile"
-			payload["username"] = "jg4706938@gmail.com"
-			payload["password"] = "Lianet123*#"
-			async with session.post(host+"login/signIn", data=payload,ssl=False) as e:
-				print(222)
-			#upload
+		
+#upload
 			if filesize-1048>zipssize:
 				parts = round(filesize / zipssize)
 				await msg.edit(f"📚 𝑪𝒐𝒎𝒑𝒓𝒊𝒎𝒊𝒆𝒏𝒅𝒐 📚\n\n🏷 Total: {parts} partes\n")
