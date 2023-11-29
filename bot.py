@@ -1526,7 +1526,7 @@ async def send_config():
 	try:
 		await bot.edit_message_text(Channel_Id,message_id=db_access,text=dumps(Configs,indent=4))
 	except:
-		#await bot.send_message(Channel_Id,text=dumps(Configs,indent=4))
+		
 		pass
 
 async def ytdlp_downloader(url,usid,msg,username,callback,format):
